@@ -11,6 +11,13 @@
 		5A752FB62289AC4D00818B93 /* HuruhuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FB52289AC4D00818B93 /* HuruhuruTests.swift */; };
 		5A752FB82289AC4D00818B93 /* Huruhuru.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A752FAA2289AC4D00818B93 /* Huruhuru.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A752FC22289AE3300818B93 /* Huruhuru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FC12289AE3300818B93 /* Huruhuru.swift */; };
+		5A752FCA2289AE9800818B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FC92289AE9700818B93 /* AppDelegate.swift */; };
+		5A752FCC2289AE9800818B93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FCB2289AE9800818B93 /* ViewController.swift */; };
+		5A752FCF2289AE9800818B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A752FCD2289AE9800818B93 /* Main.storyboard */; };
+		5A752FD12289AE9900818B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A752FD02289AE9900818B93 /* Assets.xcassets */; };
+		5A752FD42289AE9900818B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A752FD22289AE9900818B93 /* LaunchScreen.storyboard */; };
+		5A752FD92289AECF00818B93 /* Huruhuru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; };
+		5A752FDA2289AECF00818B93 /* Huruhuru.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,7 +28,28 @@
 			remoteGlobalIDString = 5A752FA62289AC4D00818B93;
 			remoteInfo = Huruhuru;
 		};
+		5A752FDB2289AECF00818B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A752F9E2289AC4D00818B93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A752FA62289AC4D00818B93;
+			remoteInfo = Huruhuru;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A752FDD2289AECF00818B93 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A752FDA2289AECF00818B93 /* Huruhuru.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5A752FA72289AC4D00818B93 /* Huruhuru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Huruhuru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +59,13 @@
 		5A752FB52289AC4D00818B93 /* HuruhuruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuruhuruTests.swift; sourceTree = "<group>"; };
 		5A752FB72289AC4D00818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A752FC12289AE3300818B93 /* Huruhuru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huruhuru.swift; sourceTree = "<group>"; };
+		5A752FC72289AE9700818B93 /* HuruhuruExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuruhuruExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A752FC92289AE9700818B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A752FCB2289AE9800818B93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A752FCE2289AE9800818B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A752FD02289AE9900818B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A752FD32289AE9900818B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A752FD52289AE9900818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +84,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A752FC42289AE9700818B93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A752FD92289AECF00818B93 /* Huruhuru.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +100,7 @@
 			children = (
 				5A752FA92289AC4D00818B93 /* Huruhuru */,
 				5A752FB42289AC4D00818B93 /* HuruhuruTests */,
+				5A752FC82289AE9700818B93 /* HuruhuruExample */,
 				5A752FA82289AC4D00818B93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +110,7 @@
 			children = (
 				5A752FA72289AC4D00818B93 /* Huruhuru.framework */,
 				5A752FB02289AC4D00818B93 /* HuruhuruTests.xctest */,
+				5A752FC72289AE9700818B93 /* HuruhuruExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +132,19 @@
 				5A752FB72289AC4D00818B93 /* Info.plist */,
 			);
 			path = HuruhuruTests;
+			sourceTree = "<group>";
+		};
+		5A752FC82289AE9700818B93 /* HuruhuruExample */ = {
+			isa = PBXGroup;
+			children = (
+				5A752FC92289AE9700818B93 /* AppDelegate.swift */,
+				5A752FCB2289AE9800818B93 /* ViewController.swift */,
+				5A752FCD2289AE9800818B93 /* Main.storyboard */,
+				5A752FD02289AE9900818B93 /* Assets.xcassets */,
+				5A752FD22289AE9900818B93 /* LaunchScreen.storyboard */,
+				5A752FD52289AE9900818B93 /* Info.plist */,
+			);
+			path = HuruhuruExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +197,25 @@
 			productReference = 5A752FB02289AC4D00818B93 /* HuruhuruTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5A752FC62289AE9700818B93 /* HuruhuruExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A752FD62289AE9900818B93 /* Build configuration list for PBXNativeTarget "HuruhuruExample" */;
+			buildPhases = (
+				5A752FC32289AE9700818B93 /* Sources */,
+				5A752FC42289AE9700818B93 /* Frameworks */,
+				5A752FC52289AE9700818B93 /* Resources */,
+				5A752FDD2289AECF00818B93 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A752FDC2289AECF00818B93 /* PBXTargetDependency */,
+			);
+			name = HuruhuruExample;
+			productName = HuruhuruExample;
+			productReference = 5A752FC72289AE9700818B93 /* HuruhuruExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -156,6 +233,9 @@
 					5A752FAF2289AC4D00818B93 = {
 						CreatedOnToolsVersion = 10.2;
 					};
+					5A752FC62289AE9700818B93 = {
+						CreatedOnToolsVersion = 10.2;
+					};
 				};
 			};
 			buildConfigurationList = 5A752FA12289AC4D00818B93 /* Build configuration list for PBXProject "Huruhuru" */;
@@ -164,6 +244,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5A752F9D2289AC4D00818B93;
 			productRefGroup = 5A752FA82289AC4D00818B93 /* Products */;
@@ -172,6 +253,7 @@
 			targets = (
 				5A752FA62289AC4D00818B93 /* Huruhuru */,
 				5A752FAF2289AC4D00818B93 /* HuruhuruTests */,
+				5A752FC62289AE9700818B93 /* HuruhuruExample */,
 			);
 		};
 /* End PBXProject section */
@@ -188,6 +270,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A752FC52289AE9700818B93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A752FD42289AE9900818B93 /* LaunchScreen.storyboard in Resources */,
+				5A752FD12289AE9900818B93 /* Assets.xcassets in Resources */,
+				5A752FCF2289AE9800818B93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +302,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A752FC32289AE9700818B93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A752FCC2289AE9800818B93 /* ViewController.swift in Sources */,
+				5A752FCA2289AE9800818B93 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -218,7 +319,31 @@
 			target = 5A752FA62289AC4D00818B93 /* Huruhuru */;
 			targetProxy = 5A752FB22289AC4D00818B93 /* PBXContainerItemProxy */;
 		};
+		5A752FDC2289AECF00818B93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A752FA62289AC4D00818B93 /* Huruhuru */;
+			targetProxy = 5A752FDB2289AECF00818B93 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A752FCD2289AE9800818B93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A752FCE2289AE9800818B93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A752FD22289AE9900818B93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A752FD32289AE9900818B93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5A752FB92289AC4D00818B93 /* Debug */ = {
@@ -434,6 +559,44 @@
 			};
 			name = Release;
 		};
+		5A752FD72289AE9900818B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PHSZKL64F;
+				INFOPLIST_FILE = HuruhuruExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.k0uhashi.HuruhuruExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A752FD82289AE9900818B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PHSZKL64F;
+				INFOPLIST_FILE = HuruhuruExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.k0uhashi.HuruhuruExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,6 +623,15 @@
 			buildConfigurations = (
 				5A752FBF2289AC4D00818B93 /* Debug */,
 				5A752FC02289AC4D00818B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A752FD62289AE9900818B93 /* Build configuration list for PBXNativeTarget "HuruhuruExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A752FD72289AE9900818B93 /* Debug */,
+				5A752FD82289AE9900818B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
