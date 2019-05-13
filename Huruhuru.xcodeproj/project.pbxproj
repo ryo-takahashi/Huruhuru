@@ -10,6 +10,7 @@
 		5A752FB12289AC4D00818B93 /* Huruhuru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; };
 		5A752FB62289AC4D00818B93 /* HuruhuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FB52289AC4D00818B93 /* HuruhuruTests.swift */; };
 		5A752FB82289AC4D00818B93 /* Huruhuru.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A752FAA2289AC4D00818B93 /* Huruhuru.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A752FC22289AE3300818B93 /* Huruhuru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FC12289AE3300818B93 /* Huruhuru.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		5A752FB02289AC4D00818B93 /* HuruhuruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuruhuruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A752FB52289AC4D00818B93 /* HuruhuruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuruhuruTests.swift; sourceTree = "<group>"; };
 		5A752FB72289AC4D00818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A752FC12289AE3300818B93 /* Huruhuru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huruhuru.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				5A752FAA2289AC4D00818B93 /* Huruhuru.h */,
 				5A752FAB2289AC4D00818B93 /* Info.plist */,
+				5A752FC12289AE3300818B93 /* Huruhuru.swift */,
 			);
 			path = Huruhuru;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					5A752FA62289AC4D00818B93 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					5A752FAF2289AC4D00818B93 = {
 						CreatedOnToolsVersion = 10.2;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A752FC22289AE3300818B93 /* Huruhuru.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		5A752FBC2289AC4D00818B93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.k0uhashi.Huruhuru;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +373,7 @@
 		5A752FBD2289AC4D00818B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +399,7 @@
 		5A752FBF2289AC4D00818B93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PHSZKL64F;
 				INFOPLIST_FILE = HuruhuruTests/Info.plist;
@@ -409,6 +418,7 @@
 		5A752FC02289AC4D00818B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PHSZKL64F;
 				INFOPLIST_FILE = HuruhuruTests/Info.plist;
