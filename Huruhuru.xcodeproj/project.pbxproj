@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0394AB2289D995005CB97F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0394AA2289D995005CB97F /* Request.swift */; };
+		5A0394AD2289DA10005CB97F /* GithubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0394AC2289DA10005CB97F /* GithubClient.swift */; };
+		5A0394AF2289DC83005CB97F /* GithubEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0394AE2289DC83005CB97F /* GithubEntity.swift */; };
 		5A752FB12289AC4D00818B93 /* Huruhuru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; };
 		5A752FB62289AC4D00818B93 /* HuruhuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FB52289AC4D00818B93 /* HuruhuruTests.swift */; };
 		5A752FB82289AC4D00818B93 /* Huruhuru.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A752FAA2289AC4D00818B93 /* Huruhuru.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +58,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A0394AA2289D995005CB97F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5A0394AC2289DA10005CB97F /* GithubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubClient.swift; sourceTree = "<group>"; };
+		5A0394AE2289DC83005CB97F /* GithubEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEntity.swift; sourceTree = "<group>"; };
 		5A752FA72289AC4D00818B93 /* Huruhuru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Huruhuru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A752FAA2289AC4D00818B93 /* Huruhuru.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Huruhuru.h; sourceTree = "<group>"; };
 		5A752FAB2289AC4D00818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 				5A752FC12289AE3300818B93 /* Huruhuru.swift */,
 				5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */,
 				5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */,
+				5A0394AA2289D995005CB97F /* Request.swift */,
+				5A0394AC2289DA10005CB97F /* GithubClient.swift */,
+				5A0394AE2289DC83005CB97F /* GithubEntity.swift */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -317,8 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A752FE52289CC1500818B93 /* CreateIssueRequest.swift in Sources */,
+				5A0394AB2289D995005CB97F /* Request.swift in Sources */,
+				5A0394AD2289DA10005CB97F /* GithubClient.swift in Sources */,
 				5A752FE32289C77100818B93 /* HuruhuruReportViewController.swift in Sources */,
 				5A752FC22289AE3300818B93 /* Huruhuru.swift in Sources */,
+				5A0394AF2289DC83005CB97F /* GithubEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
