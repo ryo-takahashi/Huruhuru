@@ -23,6 +23,7 @@ public class Huruhuru {
     
     private func presentReportController() {
         let viewController = HuruhuruReportViewController()
+        
         viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token.token)
         UIApplication.shared.delegate?.window??.rootViewController?.present(viewController, animated: true, completion: nil)
     }

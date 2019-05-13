@@ -8,6 +8,19 @@ class HuruhuruReportViewController: UIViewController {
     private var repositoryName: String!
     private var accessToken: String?
     
+    required public init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
+    
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!) {
+        let bundle = Bundle(for: HuruhuruReportViewController.self)
+        super.init(nibName: "HuruhuruReportViewController", bundle: bundle)
+    }
+    
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+    }
+    
     func inject(ownerName: String, repositoryName: String, accessToken: String?) {
         self.ownerName = ownerName
         self.repositoryName = repositoryName
