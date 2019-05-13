@@ -3,10 +3,8 @@ import Huruhuru
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        Huruhuru.say()
+    public override func viewDidLoad() {
+        print("hoge")
     }
 
 }
-
