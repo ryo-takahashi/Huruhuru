@@ -1,0 +1,28 @@
+included:
+  - Huruhuru/
+force_cast: warning
+force_try:
+  severity: warning
+line_length: 1200
+variable_name:
+  excluded:
+    - e
+    - id
+file_length:
+  - 1200
+  - 1200
+type_body_length:
+  - 900 
+  - 1000
+function_body_length:
+  - 80 
+  - 120    
+disabled_rules:
+    - todo
+    - variable_name
+    - type_name
+cyclomatic_complexity:
+    warning: 25
+    error: 35
+type_name:
+  min_length: 2
