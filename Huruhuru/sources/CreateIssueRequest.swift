@@ -12,7 +12,7 @@ struct CreateIssueRequest: GithubRequest {
     }
     
     var queryItems: [URLQueryItem] {
-        return [URLQueryItem(name: "access_token", value: accessToken)]
+        return []
     }
     
     var body: Encodable? {
@@ -26,7 +26,7 @@ struct CreateIssueRequest: GithubRequest {
     init(ownerName: String, repositoryName: String, title: String, body: String, accessToken: String?) {
         self.ownerName = ownerName
         self.repositoryName = repositoryName
-        self.parameter = GithubCreateIssueParameter(title: title, body: body, assignees: [], milestone: nil, labels: [])
+        self.parameter = GithubCreateIssueParameter(title: title, body: body, assignees: [], milestone: nil, labels: [], accessToken: accessToken)
         self.accessToken = accessToken
     }
 }
@@ -36,4 +36,14 @@ struct GithubCreateIssueParameter: Codable {
     let assignees: [String]
     let milestone: Int?
     let labels: [String]
+    let accessToken: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case body
+        case assignees
+        case milestone
+        case labels
+        case accessToken = "access_token"
+    }
 }
