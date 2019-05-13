@@ -18,6 +18,8 @@
 		5A752FD42289AE9900818B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A752FD22289AE9900818B93 /* LaunchScreen.storyboard */; };
 		5A752FD92289AECF00818B93 /* Huruhuru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; };
 		5A752FDA2289AECF00818B93 /* Huruhuru.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A752FE12289C75900818B93 /* HuruhuruReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A752FE02289C75900818B93 /* HuruhuruReportViewController.xib */; };
+		5A752FE32289C77100818B93 /* HuruhuruReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		5A752FD02289AE9900818B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A752FD32289AE9900818B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A752FD52289AE9900818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A752FE02289C75900818B93 /* HuruhuruReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuruhuruReportViewController.xib; sourceTree = "<group>"; };
+		5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuruhuruReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +122,8 @@
 		5A752FA92289AC4D00818B93 /* Huruhuru */ = {
 			isa = PBXGroup;
 			children = (
-				5A752FAA2289AC4D00818B93 /* Huruhuru.h */,
-				5A752FAB2289AC4D00818B93 /* Info.plist */,
-				5A752FC12289AE3300818B93 /* Huruhuru.swift */,
+				5A752FDF2289C6C500818B93 /* resources */,
+				5A752FDE2289C6BA00818B93 /* sources */,
 			);
 			path = Huruhuru;
 			sourceTree = "<group>";
@@ -145,6 +148,25 @@
 				5A752FD52289AE9900818B93 /* Info.plist */,
 			);
 			path = HuruhuruExample;
+			sourceTree = "<group>";
+		};
+		5A752FDE2289C6BA00818B93 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				5A752FAA2289AC4D00818B93 /* Huruhuru.h */,
+				5A752FAB2289AC4D00818B93 /* Info.plist */,
+				5A752FC12289AE3300818B93 /* Huruhuru.swift */,
+				5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		5A752FDF2289C6C500818B93 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A752FE02289C75900818B93 /* HuruhuruReportViewController.xib */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A752FE12289C75900818B93 /* HuruhuruReportViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A752FE32289C77100818B93 /* HuruhuruReportViewController.swift in Sources */,
 				5A752FC22289AE3300818B93 /* Huruhuru.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
