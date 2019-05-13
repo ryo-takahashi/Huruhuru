@@ -31,7 +31,12 @@ class HuruhuruReportViewController: UIViewController {
         let issueTitle = issueTitleField.text ?? ""
         let issueDescription = issueDescriptionField.text ?? ""
         GithubClient().send(request: CreateIssueRequest(ownerName: ownerName, repositoryName: repositoryName, title: issueTitle, body: issueDescription, accessToken: accessToken)) { (result) in
-            guard let response = try? result.get() else { return }
+            switch result {
+            case .success(let value):
+                print("success")
+            case .failure(let error):
+                print(error)
+            }
         }
         dismiss(animated: true, completion: nil)
     }
