@@ -2,22 +2,22 @@ import UIKit
 
 public class Huruhuru {
     
-    private let repositoryInfo: WriteToRepositoryInfo
-    private let token: GithubToken
+    public static let shared = Huruhuru()
+    private init() {}
+    private var repositoryInfo: WriteToRepositoryInfo!
+    private var token: GithubToken!
     
-    public init(writeToInfo: WriteToRepositoryInfo, token: GithubToken) {
+    public func start(writeToInfo: WriteToRepositoryInfo, token: GithubToken) {
         self.repositoryInfo = writeToInfo
         self.token = token
+        NotificationCenter.default
+            .addObserver(self,
+                         selector: #selector(type(of: self).detectedScreenShot(_:)),
+                         name: UIApplication.userDidTakeScreenshotNotification,
+                         object: nil)
     }
     
-    public func start() {
-        NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification, object: nil, queue: OperationQueue.main) { [weak self] _ in
-            self?.detectedScreenShot()
-        }
-    }
-    
-    private func detectedScreenShot() {
-        print("take screenshot")
+    @objc private func detectedScreenShot(_ notification: Notification) {
         presentReportController()
     }
     
