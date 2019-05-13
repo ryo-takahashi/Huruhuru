@@ -1,5 +1,5 @@
 public class Huruhuru {
-    public func say() {
+    public static func say() {
         print("nyaa")
     }
 }
