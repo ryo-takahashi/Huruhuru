@@ -23,6 +23,7 @@ public class Huruhuru {
     
     private func presentReportController() {
         let viewController = HuruhuruReportViewController()
+        viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token.token)
         UIApplication.shared.delegate?.window??.rootViewController?.present(viewController, animated: true, completion: nil)
     }
 }
@@ -38,8 +39,8 @@ extension Huruhuru {
         }
     }
     public struct GithubToken {
-        public let token: String
-        public init(token: String) {
+        public let token: String?
+        public init(token: String?) {
             self.token = token
         }
     }

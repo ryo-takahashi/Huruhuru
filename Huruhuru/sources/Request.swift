@@ -20,6 +20,7 @@ protocol GithubRequest {
     var method: HTTPMethod { get }
     var queryItems: [URLQueryItem] { get }
     var body: Encodable? { get }
+    var accessToken: String? { get }
 }
 
 extension GithubRequest {
