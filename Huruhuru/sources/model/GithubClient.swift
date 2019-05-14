@@ -1,7 +1,10 @@
 import Foundation
 
 struct GithubAPIError: Decodable, Error {
-    
+    let message: String
+    enum CodingKeys: String, CodingKey {
+        case message
+    }
 }
 
 enum GithubClientError: Error {
