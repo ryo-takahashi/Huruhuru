@@ -22,9 +22,12 @@ public class Huruhuru {
     }
     
     private func presentReportController() {
+        guard let token = token.token else {
+            assertionFailure("need set github token")
+            return
+        }
         let viewController = HuruhuruReportViewController()
-        
-        viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token.token)
+        viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token)
         UIApplication.shared.delegate?.window??.rootViewController?.present(viewController, animated: true, completion: nil)
     }
 }

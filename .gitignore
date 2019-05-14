@@ -32,3 +32,6 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+# secret keys
+HuruhuruExample/Secret.swift

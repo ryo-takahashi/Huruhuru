@@ -6,7 +6,7 @@ class HuruhuruReportViewController: UIViewController {
     
     private var ownerName: String!
     private var repositoryName: String!
-    private var accessToken: String?
+    private var accessToken: String!
     
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -21,7 +21,7 @@ class HuruhuruReportViewController: UIViewController {
         self.init(nibName: nil, bundle: nil)
     }
     
-    func inject(ownerName: String, repositoryName: String, accessToken: String?) {
+    func inject(ownerName: String, repositoryName: String, accessToken: String) {
         self.ownerName = ownerName
         self.repositoryName = repositoryName
         self.accessToken = accessToken

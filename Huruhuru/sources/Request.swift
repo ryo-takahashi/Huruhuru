@@ -20,7 +20,7 @@ protocol GithubRequest {
     var method: HTTPMethod { get }
     var queryItems: [URLQueryItem] { get }
     var body: Encodable? { get }
-    var accessToken: String? { get }
+    var allHTTPHeaderFields: [String: String]? { get }
 }
 
 extension GithubRequest {
@@ -43,6 +43,8 @@ extension GithubRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.url = components?.url
         urlRequest.httpMethod = method.rawValue
+        urlRequest.httpBody = body?.convertData
+        urlRequest.allHTTPHeaderFields = allHTTPHeaderFields
         return urlRequest
     }
     

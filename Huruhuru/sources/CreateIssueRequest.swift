@@ -1,7 +1,9 @@
 struct CreateIssueRequest: GithubRequest {
+    
     private let ownerName: String
     private let repositoryName: String
     private let parameter: GithubCreateIssueParameter
+    private let accessToken: String
     
     var path: String {
         return "/repos/\(ownerName)/\(repositoryName)/issues"
@@ -19,11 +21,15 @@ struct CreateIssueRequest: GithubRequest {
         return parameter
     }
     
-    var accessToken: String?
+    var allHTTPHeaderFields: [String : String]? {
+        return [
+            "Authorization": "token \(accessToken)"
+        ]
+    }
     
     typealias Response = GithubIssue
     
-    init(ownerName: String, repositoryName: String, title: String, body: String, accessToken: String?) {
+    init(ownerName: String, repositoryName: String, title: String, body: String, accessToken: String) {
         self.ownerName = ownerName
         self.repositoryName = repositoryName
         self.parameter = GithubCreateIssueParameter(title: title, body: body, assignees: [], milestone: nil, labels: [], accessToken: accessToken)
