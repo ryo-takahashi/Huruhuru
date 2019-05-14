@@ -30,15 +30,32 @@ class HuruhuruReportViewController: UIViewController {
     @IBAction func didTapSendButton(_ sender: UIButton) {
         let issueTitle = issueTitleField.text ?? ""
         let issueDescription = issueDescriptionField.text ?? ""
-        GithubClient().send(request: CreateIssueRequest(ownerName: ownerName, repositoryName: repositoryName, title: issueTitle, body: issueDescription, accessToken: accessToken)) { (result) in
+        GithubClient().send(request: CreateIssueRequest(ownerName: ownerName, repositoryName: repositoryName, title: issueTitle, body: issueDescription, accessToken: accessToken)) { [weak self] (result) in
             switch result {
             case .success(let value):
-                print("success")
+                self?.presentAlertViewController(title: "送信完了🚀", message: nil)
             case .failure(let error):
-                print(error)
+                switch error {
+                case .apiError(let error):
+                    self?.presentAlertViewController(title: "API Error", message: error.message)
+                case .connectionError(let error):
+                    self?.presentAlertViewController(title: "connection error", message: error.localizedDescription)
+                case .responseParseError(let error):
+                    self?.presentAlertViewController(title: "error", message: error.localizedDescription)
+                }
             }
         }
-        dismiss(animated: true, completion: nil)
+        
     }
     
+    private func presentAlertViewController(title: String, message: String?) {
+        DispatchQueue.main.async { [weak self] in
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let closeAction = UIAlertAction(title: "閉じる", style: .default, handler: { [weak self] _ in
+                self?.dismiss(animated: true, completion: nil)
+            })
+            alertController.addAction(closeAction)
+            self?.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
