@@ -12,12 +12,19 @@ public class Huruhuru {
         self.token = token
         NotificationCenter.default
             .addObserver(self,
-                         selector: #selector(type(of: self).detectedScreenShot(_:)),
+                         selector: #selector(type(of: self).didTakeScreenShot(_:)),
                          name: UIApplication.userDidTakeScreenshotNotification,
                          object: nil)
     }
     
-    @objc private func detectedScreenShot(_ notification: Notification) {
+    deinit {
+        NotificationCenter.default
+            .removeObserver(self,
+                            name: UIApplication.userDidTakeScreenshotNotification,
+                            object: nil)
+    }
+    
+    @objc private func didTakeScreenShot(_ notification: Notification) {
         presentReportController()
     }
     
