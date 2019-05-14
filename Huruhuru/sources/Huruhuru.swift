@@ -4,11 +4,11 @@ public class Huruhuru {
     
     public static let shared = Huruhuru()
     private init() {}
-    private var repositoryInfo: WriteToRepositoryInfo!
+    private var repositoryInfo: RepositoryInfo!
     private var token: GithubToken!
     
-    public func start(writeToInfo: WriteToRepositoryInfo, token: GithubToken) {
-        self.repositoryInfo = writeToInfo
+    public func start(sendTo: RepositoryInfo, token: GithubToken) {
+        self.repositoryInfo = sendTo
         self.token = token
         NotificationCenter.default
             .addObserver(self,
@@ -40,7 +40,7 @@ public class Huruhuru {
 }
 
 extension Huruhuru {
-    public struct WriteToRepositoryInfo {
+    public struct RepositoryInfo {
         public let ownerName: String
         public let repositoryName: String
         
