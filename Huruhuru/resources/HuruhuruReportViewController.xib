@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-DV-xhq">
-                    <rect key="frame" x="8" y="360" width="398" height="176"/>
+                    <rect key="frame" x="8" y="68" width="398" height="176"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="grb-3l-HXc">
                             <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
@@ -92,9 +92,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Shf-DV-xhq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1jg-Jm-p00"/>
                 <constraint firstItem="Shf-DV-xhq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="JcD-zW-gsF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Shf-DV-xhq" secondAttribute="trailing" constant="8" id="UoJ-Ak-Fxh"/>
+                <constraint firstItem="Shf-DV-xhq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="WdE-8e-PFd"/>
                 <constraint firstItem="Shf-DV-xhq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vYr-WZ-6l3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
