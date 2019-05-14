@@ -111,6 +111,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0C6A09228B303C006B6DAD /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				5A0C6A07228B2A77006B6DAD /* Encodable+JSON.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		5A0C6A0A228B305B006B6DAD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5A0C6A0B228B3075006B6DAD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */,
+				5A0394AA2289D995005CB97F /* Request.swift */,
+				5A0394AC2289DA10005CB97F /* GithubClient.swift */,
+				5A0394AE2289DC83005CB97F /* GithubEntity.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		5A752F9D2289AC4D00818B93 = {
 			isa = PBXGroup;
 			children = (
@@ -167,14 +194,11 @@
 		5A752FDE2289C6BA00818B93 /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				5A0C6A0B228B3075006B6DAD /* model */,
+				5A0C6A0A228B305B006B6DAD /* view */,
+				5A0C6A09228B303C006B6DAD /* extension */,
 				5A752FAA2289AC4D00818B93 /* Huruhuru.h */,
 				5A752FC12289AE3300818B93 /* Huruhuru.swift */,
-				5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */,
-				5A0C6A07228B2A77006B6DAD /* Encodable+JSON.swift */,
-				5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */,
-				5A0394AA2289D995005CB97F /* Request.swift */,
-				5A0394AC2289DA10005CB97F /* GithubClient.swift */,
-				5A0394AE2289DC83005CB97F /* GithubEntity.swift */,
 			);
 			path = sources;
 			sourceTree = "<group>";
