@@ -39,7 +39,7 @@ class HuruhuruReportViewController: UIViewController {
         let issueDescription = issueDescriptionField.text ?? ""
         GithubClient().send(request: CreateIssueRequest(ownerName: ownerName, repositoryName: repositoryName, title: issueTitle, body: issueDescription, accessToken: accessToken)) { [weak self] (result) in
             switch result {
-            case .success(let value):
+            case .success:
                 self?.presentAlertViewController(title: "送信完了🚀", message: nil)
             case .failure(let error):
                 switch error {
