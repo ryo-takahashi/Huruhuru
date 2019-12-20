@@ -6,15 +6,20 @@ public class Huruhuru {
     private init() {}
     private var repositoryInfo: RepositoryInfo!
     private var token: GithubToken!
+    private var supportDetectGesture: SupportDetectGesture!
     
-    public func start(sendTo: RepositoryInfo, token: GithubToken) {
+    public func start(sendTo: RepositoryInfo, token: GithubToken, supportDetectGesture: SupportDetectGesture) {
         self.repositoryInfo = sendTo
         self.token = token
-        NotificationCenter.default
-            .addObserver(self,
-                         selector: #selector(type(of: self).didTakeScreenShot(_:)),
-                         name: UIApplication.userDidTakeScreenshotNotification,
-                         object: nil)
+        self.supportDetectGesture = supportDetectGesture
+        
+        if supportDetectGesture.fetchDetectEnabledState(detectType: .screenshot) {
+            NotificationCenter.default
+                .addObserver(self,
+                             selector: #selector(type(of: self).didTakeScreenShot(_:)),
+                             name: UIApplication.userDidTakeScreenshotNotification,
+                             object: nil)
+        }
     }
     
     deinit {
@@ -26,6 +31,12 @@ public class Huruhuru {
     
     @objc private func didTakeScreenShot(_ notification: Notification) {
         presentReportController()
+    }
+    
+    fileprivate func didShakeMotion() {
+        if supportDetectGesture.fetchDetectEnabledState(detectType: .shake) {
+            presentReportController()
+        }
     }
     
     private func presentReportController() {
@@ -54,6 +65,34 @@ extension Huruhuru {
         public let token: String?
         public init(token: String?) {
             self.token = token
+        }
+    }
+    
+    public struct SupportDetectGesture {
+        public enum DetectType {
+            case screenshot
+            case shake
+        }
+        
+        public let types: [DetectType]
+        
+        public init(types: [DetectType]) {
+            self.types = types
+        }
+        
+        public func fetchDetectEnabledState(detectType: DetectType) -> Bool {
+            let isEnabledDetectType = !types.lazy.filter { $0 == detectType }.isEmpty
+            return isEnabledDetectType
+        }
+    }
+    
+}
+
+extension UIViewController {
+    open override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        super.motionBegan(motion, with: event)
+        if motion == .motionShake {
+            Huruhuru.shared.didShakeMotion()
         }
     }
 }
