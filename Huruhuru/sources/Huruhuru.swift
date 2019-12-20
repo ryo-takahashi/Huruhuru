@@ -34,8 +34,9 @@ public class Huruhuru {
             return
         }
         let viewController = HuruhuruReportViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
         viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token)
-        UIApplication.shared.delegate?.window??.rootViewController?.present(viewController, animated: true, completion: nil)
+        UIApplication.shared.delegate?.window??.rootViewController?.present(navigationController, animated: true, completion: nil)
     }
 }
 

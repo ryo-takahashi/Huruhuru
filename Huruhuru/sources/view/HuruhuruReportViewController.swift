@@ -21,6 +21,13 @@ class HuruhuruReportViewController: UIViewController {
         self.init(nibName: nil, bundle: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let cancelBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancelBarButtonItem(_:)))
+        navigationItem.rightBarButtonItem = cancelBarButtonItem
+        navigationItem.title = "Huruhuru Report Issue"
+    }
+    
     func inject(ownerName: String, repositoryName: String, accessToken: String) {
         self.ownerName = ownerName
         self.repositoryName = repositoryName
@@ -46,6 +53,10 @@ class HuruhuruReportViewController: UIViewController {
             }
         }
         
+    }
+    
+    @objc func didTapCancelBarButtonItem(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     private func presentAlertViewController(title: String, message: String?) {
