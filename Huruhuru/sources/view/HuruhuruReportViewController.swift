@@ -40,15 +40,15 @@ class HuruhuruReportViewController: UIViewController {
         GithubClient().send(request: CreateIssueRequest(ownerName: ownerName, repositoryName: repositoryName, title: issueTitle, body: issueDescription, accessToken: accessToken)) { [weak self] (result) in
             switch result {
             case .success:
-                self?.presentAlertViewController(title: "送信完了🚀", message: nil)
+                self?.presentAlertViewController(title: "Successfully report issue! 🚀", message: nil)
             case .failure(let error):
                 switch error {
                 case .apiError(let error):
-                    self?.presentAlertViewController(title: "API Error", message: error.message)
+                    self?.presentAlertViewController(title: "API Error 🙃", message: error.message)
                 case .connectionError(let error):
-                    self?.presentAlertViewController(title: "connection error", message: error.localizedDescription)
+                    self?.presentAlertViewController(title: "connection error 💥", message: error.localizedDescription)
                 case .responseParseError(let error):
-                    self?.presentAlertViewController(title: "error", message: error.localizedDescription)
+                    self?.presentAlertViewController(title: "response parse error 🤢", message: error.localizedDescription)
                 }
             }
         }
