@@ -48,7 +48,8 @@ class HuruhuruReportViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
         let currentDateString = formatter.string(from: Date())
         let fileName = "\(issueTitle.removedSpacing)-\(currentDateString).png"
-        githubClient.send(request: CreateFileRequest(ownerName: ownerName, repositoryName: repositoryName, accessToken: accessToken, fileName: fileName, uploadData: uploadScreenImageData)) { [weak self] result in
+        let createFileRequestParameter = CreateFileRequest.Parameter(ownerName: ownerName, repositoryName: repositoryName, accessToken: accessToken, fileName: fileName, body: CreateFileRequest.Body(message: fileName, content: uploadScreenImageData.base64EncodedString(), branch: "huruhuru-auto-created-branch-for-upload-image"))
+        githubClient.send(request: CreateFileRequest(parameter: createFileRequestParameter)) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
