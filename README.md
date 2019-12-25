@@ -1,7 +1,6 @@
 # Huruhuru
 
-Huruhuru is in-app issue reporting debug tool for team QA.
-supported github only 🙃.
+Huruhuru is in-app issue reporting debug tool for team QA. supported github only 🙃
 
 ## Requirements
 - Swift 5.0 or later
@@ -19,6 +18,7 @@ Others have not been verified.
 ## Usage
 
 1. Create a github token
+- check `repo: Full control of private repositories` or `public_repo: Access public repositories`
 
 ![](./assets/example-create-github-personal-token.png)
 
@@ -34,4 +34,4 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-note: By using [cocoapods-keys](https://github.com/orta/cocoapods-keys), you do not have to commit SecretKey directly to the source code.
+note: By using [cocoapods-keys](https://github.com/orta/cocoapods-keys), you do not have to commit SecretKey directly to the source code.
