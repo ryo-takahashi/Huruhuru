@@ -3,10 +3,13 @@ import UIKit
 public class Huruhuru {
     
     public static let shared = Huruhuru()
+    static let imageUploadBranchName = "huruhuru-auto-created-branch-for-upload-image"
+    
     private init() {}
     private var repositoryInfo: RepositoryInfo!
     private var token: GithubToken!
     private var supportDetectGesture: SupportDetectGesture!
+    private let githubClient = GithubClient()
     
     public func start(sendTo: RepositoryInfo, token: GithubToken, supportDetectGesture: SupportDetectGesture) {
         self.repositoryInfo = sendTo
@@ -20,6 +23,7 @@ public class Huruhuru {
                              name: UIApplication.userDidTakeScreenshotNotification,
                              object: nil)
         }
+        createBranchForImageUploadIfNeeded(ownerName: sendTo.ownerName, repositoryName: sendTo.repositoryName, accessToken: token.token ?? "")
     }
     
     deinit {
@@ -52,6 +56,23 @@ public class Huruhuru {
         
         viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token, uploadScreenImage: screenImage)
         UIApplication.shared.delegate?.window??.rootViewController?.present(navigationController, animated: true, completion: nil)
+    }
+    
+    private func createBranchForImageUploadIfNeeded(ownerName: String, repositoryName: String, accessToken: String) {
+        githubClient.send(request: SingleReferenceRequest(parameter: SingleReferenceRequest.Parameter(ownerName: ownerName, repositoryName: repositoryName, accessToken: accessToken, reference: "/heads/\(Self.imageUploadBranchName)")), completion: { [weak self] result in
+            switch result {
+            case .success:
+                break
+            case .failure:
+                self?.githubClient.send(request: SingleReferenceRequest(parameter: SingleReferenceRequest.Parameter(ownerName: ownerName, repositoryName: repositoryName, accessToken: accessToken, reference: "/heads/master")), completion: { [weak self] result in
+                    switch result {
+                    case .success(let masterReference):
+                        self?.githubClient.send(request: CreateReferenceRequest(parameter: CreateReferenceRequest.Parameter(ownerName: ownerName, repositoryName: repositoryName, accessToken: accessToken, body: CreateReferenceRequest.Body(ref: "refs/heads/\(Self.imageUploadBranchName)", sha: masterReference.object.sha))), completion: { _ in })
+                    case .failure: break
+                    }
+                })
+            }
+        })
     }
 }
 
