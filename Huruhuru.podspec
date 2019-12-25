@@ -11,5 +11,5 @@ Pod::Spec.new do |spec|
   spec.resources     = "Huruhuru/**/*.{xib,png}"
   spec.exclude_files = "Classes/Exclude"
   spec.swift_version = "5.1"
-  spec.platform      = :ios, "11.0"
+  spec.platform      = :ios, "10.0"
 end
