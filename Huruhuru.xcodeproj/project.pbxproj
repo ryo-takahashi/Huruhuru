@@ -26,6 +26,9 @@
 		5A752FDA2289AECF00818B93 /* Huruhuru.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A752FE32289C77100818B93 /* HuruhuruReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */; };
 		5A752FE52289CC1500818B93 /* CreateIssueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */; };
+		5AFAA4E123B2FCFF0010912E /* UploadFileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA4E023B2FCFF0010912E /* UploadFileRequest.swift */; };
+		5AFAA4E523B32B8C0010912E /* UIView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA4E423B32B8C0010912E /* UIView+Common.swift */; };
+		5AFAA4E723B339870010912E /* String+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA4E623B339870010912E /* String+Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		5A752FD52289AE9900818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuruhuruReportViewController.swift; sourceTree = "<group>"; };
 		5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueRequest.swift; sourceTree = "<group>"; };
+		5AFAA4E023B2FCFF0010912E /* UploadFileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileRequest.swift; sourceTree = "<group>"; };
+		5AFAA4E423B32B8C0010912E /* UIView+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Common.swift"; sourceTree = "<group>"; };
+		5AFAA4E623B339870010912E /* String+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Common.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				5A0C6A07228B2A77006B6DAD /* Encodable+JSON.swift */,
+				5AFAA4E423B32B8C0010912E /* UIView+Common.swift */,
+				5AFAA4E623B339870010912E /* String+Common.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */,
+				5AFAA4E023B2FCFF0010912E /* UploadFileRequest.swift */,
 				5A0394AA2289D995005CB97F /* Request.swift */,
 				5A0394AC2289DA10005CB97F /* GithubClient.swift */,
 				5A0394AE2289DC83005CB97F /* GithubEntity.swift */,
@@ -355,13 +364,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFAA4E123B2FCFF0010912E /* UploadFileRequest.swift in Sources */,
 				5A752FE52289CC1500818B93 /* CreateIssueRequest.swift in Sources */,
 				5A0394AB2289D995005CB97F /* Request.swift in Sources */,
 				5A0C6A08228B2A77006B6DAD /* Encodable+JSON.swift in Sources */,
 				5A0394AD2289DA10005CB97F /* GithubClient.swift in Sources */,
+				5AFAA4E723B339870010912E /* String+Common.swift in Sources */,
 				5A752FE32289C77100818B93 /* HuruhuruReportViewController.swift in Sources */,
 				5A752FC22289AE3300818B93 /* Huruhuru.swift in Sources */,
 				5A0394AF2289DC83005CB97F /* GithubEntity.swift in Sources */,
+				5AFAA4E523B32B8C0010912E /* UIView+Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

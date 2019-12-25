@@ -34,7 +34,7 @@ extension GithubRequest {
         switch method {
         case .get:
             components?.queryItems = queryItems
-        case .post:
+        case .post, .put:
             break
         default:
             fatalError("Unsupported method \(method)")

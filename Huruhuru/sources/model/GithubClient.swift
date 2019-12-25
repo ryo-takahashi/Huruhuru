@@ -11,6 +11,17 @@ enum GithubClientError: Error {
     case connectionError(Error)
     case responseParseError(Error)
     case apiError(GithubAPIError)
+    
+    var message: String {
+        switch self {
+        case .connectionError:
+            return "connection error"
+        case .responseParseError:
+            return "response parse error"
+        case .apiError(let error):
+            return error.message
+        }
+    }
 }
 
 class GithubClient {

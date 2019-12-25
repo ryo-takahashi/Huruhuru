@@ -44,9 +44,13 @@ public class Huruhuru {
             assertionFailure("need set github token")
             return
         }
+        guard let screenImage = UIApplication.shared.keyWindow?.rootViewController?.view.asImage()else {
+            return
+        }
         let viewController = HuruhuruReportViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
-        viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token)
+        
+        viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token, uploadScreenImage: screenImage)
         UIApplication.shared.delegate?.window??.rootViewController?.present(navigationController, animated: true, completion: nil)
     }
 }
