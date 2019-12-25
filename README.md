@@ -35,3 +35,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 note: By using [cocoapods-keys](https://github.com/orta/cocoapods-keys), you do not have to commit SecretKey directly to the source code.
+
+3. Take a shake gesture or take a screenshot to open the report view
+
+![](./assets/example-report-view.png)`
+
