@@ -20,7 +20,7 @@ Others have not been verified.
 1. Create a github token
 - check `repo: Full control of private repositories` or `public_repo: Access public repositories`
 
-![](./assets/example-create-github-personal-token.png)
+<img src="./assets/example-create-github-personal-token.png" width=50%>
 
 2. Write to Code.
 
@@ -38,5 +38,5 @@ note: By using [cocoapods-keys](https://github.com/orta/cocoapods-keys), you do 
 
 3. Take a shake gesture or take a screenshot to open the report view
 
-![](./assets/example-report-view.png)`
+<img src="./assets/example-report-view.png" width=50%>
 
