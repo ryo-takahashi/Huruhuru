@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="issueDescriptionField" destination="GPM-gN-MJR" id="hsk-of-Tgc"/>
                 <outlet property="issueTitleField" destination="esI-lC-Vur" id="HNr-ck-gnA"/>
+                <outlet property="sendButton" destination="mUd-3p-y3w" id="kQ2-5w-Mcd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q1J-Am-86w"/>
             </connections>
         </placeholder>
@@ -31,7 +32,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esI-lC-Vur">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(required)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esI-lC-Vur">
                                     <rect key="frame" x="105.5" y="0.0" width="292.5" height="30"/>
                                     <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -39,6 +40,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="didChangeIssueTitleTextField:" destination="-1" eventType="editingChanged" id="Sqk-yB-cXb"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <constraints>
@@ -54,7 +58,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-gN-MJR">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-gN-MJR">
                                     <rect key="frame" x="105.5" y="0.0" width="292.5" height="100"/>
                                     <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
