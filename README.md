@@ -20,7 +20,7 @@ Others have not been verified.
 1. Create a github token
 - check `repo: Full control of private repositories` or `public_repo: Access public repositories`
 
-<img src="./assets/example-create-github-personal-token.png" width=50%>
+<img src="./assets/example-create-github-personal-token.png" width=80%>
 
 2. Write to Code.
 
