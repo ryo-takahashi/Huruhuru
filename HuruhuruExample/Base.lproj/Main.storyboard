@@ -34,13 +34,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ple-Me-3Rd">
                                         <rect key="frame" x="0.0" y="41" width="46" height="30"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Oew-8L-9Q6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="guq-UA-vGP"/>
                             <constraint firstItem="Oew-8L-9Q6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vIX-Yd-3c7"/>
