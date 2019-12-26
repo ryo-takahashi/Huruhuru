@@ -1,5 +1,11 @@
 # Huruhuru
 
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Version](https://img.shields.io/cocoapods/v/Huruhuru.svg?style=flat)](http://cocoadocs.org/docsets/Huruhuru)
+[![Platform](https://img.shields.io/cocoapods/p/Huruhuru.svg?style=flat)](http://cocoadocs.org/docsets/Huruhuru)
+
+<img src="./assets/icon.png" width=50%>
+
 Huruhuru is in-app issue reporting debug tool for team QA. supported github only 🙃
 
 ## Requirements
@@ -7,6 +13,15 @@ Huruhuru is in-app issue reporting debug tool for team QA. supported github only
 - iOS 10.0 or later
 
 Others have not been verified.
+
+## TODO
+- [ ] Add Tests
+- [ ] Support CI.
+- [ ] Support Carthage, Swift Package Manager
+
+## ⚠ Warning
+
+- `Huruhuru` automatically creates an image storage branch (`huruhuru-auto-created-branch-for-upload-image`) in your specified repository.
 
 ## Installation
 
@@ -18,6 +33,7 @@ Others have not been verified.
 ## Usage
 
 1. Create a github token
+- access to [generate github token page](https://github.com/settings/tokens)
 - check `repo: Full control of private repositories` or `public_repo: Access public repositories`
 
 <img src="./assets/example-create-github-personal-token.png" width=80%>
