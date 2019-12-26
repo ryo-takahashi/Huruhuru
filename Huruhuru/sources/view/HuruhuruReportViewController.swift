@@ -32,6 +32,8 @@ class HuruhuruReportViewController: UIViewController {
         navigationItem.title = "Huruhuru Report Issue"
         sendButton.isEnabled = false
         screenImageView.image = uploadScreenImage
+        issueTitleField.delegate = self
+        issueDescriptionField.delegate = self
     }
     
     func inject(ownerName: String, repositoryName: String, accessToken: String, uploadScreenImage: UIImage) {
@@ -121,5 +123,18 @@ class HuruhuruReportViewController: UIViewController {
             alertController.addAction(closeAction)
             self?.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        issueTitleField.resignFirstResponder()
+        issueDescriptionField.resignFirstResponder()
+    }
+}
+
+extension HuruhuruReportViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
