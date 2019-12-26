@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="issueDescriptionField" destination="GPM-gN-MJR" id="hsk-of-Tgc"/>
                 <outlet property="issueTitleField" destination="esI-lC-Vur" id="HNr-ck-gnA"/>
+                <outlet property="loadingView" destination="i7g-hx-zn3" id="y6A-eS-0SJ"/>
                 <outlet property="screenImageView" destination="1Mx-iK-1Aa" id="Cgm-Eb-KXS"/>
                 <outlet property="sendButton" destination="mUd-3p-y3w" id="kQ2-5w-Mcd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q1J-Am-86w"/>
@@ -98,16 +99,34 @@
                         </button>
                     </subviews>
                 </stackView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7g-hx-zn3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gua-4c-UDQ">
+                            <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="gua-4c-UDQ" firstAttribute="centerX" secondItem="i7g-hx-zn3" secondAttribute="centerX" id="LiG-mM-kwG"/>
+                        <constraint firstItem="gua-4c-UDQ" firstAttribute="centerY" secondItem="i7g-hx-zn3" secondAttribute="centerY" id="rIF-bC-mCu"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Shf-DV-xhq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="JcD-zW-gsF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Shf-DV-xhq" secondAttribute="trailing" constant="8" id="UoJ-Ak-Fxh"/>
                 <constraint firstItem="Shf-DV-xhq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="WdE-8e-PFd"/>
+                <constraint firstAttribute="bottom" secondItem="i7g-hx-zn3" secondAttribute="bottom" id="avg-4V-wFr"/>
+                <constraint firstItem="i7g-hx-zn3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ejq-wv-oLD"/>
+                <constraint firstItem="i7g-hx-zn3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kXg-gE-pih"/>
+                <constraint firstAttribute="trailing" secondItem="i7g-hx-zn3" secondAttribute="trailing" id="qY1-MJ-LRJ"/>
                 <constraint firstItem="Shf-DV-xhq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vYr-WZ-6l3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="154"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </view>
     </objects>
 </document>

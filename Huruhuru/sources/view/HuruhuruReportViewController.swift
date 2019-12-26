@@ -5,6 +5,7 @@ class HuruhuruReportViewController: UIViewController {
     @IBOutlet private weak var issueDescriptionField: UITextField!
     @IBOutlet private weak var sendButton: UIButton!
     @IBOutlet private weak var screenImageView: UIImageView!
+    @IBOutlet private weak var loadingView: UIView!
     
     private var ownerName: String!
     private var repositoryName: String!
@@ -51,12 +52,16 @@ class HuruhuruReportViewController: UIViewController {
         let currentDateString = formatter.string(from: Date())
         let fileName = "\(issueTitle.removedSpacing)-\(currentDateString).png"
         let createFileRequestParameter = CreateFileRequest.Parameter(ownerName: ownerName, repositoryName: repositoryName, accessToken: accessToken, fileName: fileName, body: CreateFileRequest.Body(message: fileName, content: uploadScreenImageData.base64EncodedString(), branch: Huruhuru.imageUploadBranchName))
+        loadingView.isHidden = false
         githubClient.send(request: CreateFileRequest(parameter: createFileRequestParameter)) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 let issueDescription = self.generateIssueDescription(inputDescription: issueDescription, uploadedScreenImagePath: response.content.downloadURL)
                 self.githubClient.send(request: CreateIssueRequest(ownerName: self.ownerName, repositoryName: self.repositoryName, title: issueTitle, body: issueDescription, accessToken: self.accessToken)) { [weak self] (result) in
+                    DispatchQueue.main.async {
+                        self?.loadingView.isHidden = true
+                    }
                     switch result {
                     case .success:
                         self?.presentAlertViewController(title: "Successfully report issue! 🚀", message: nil)
