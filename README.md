@@ -27,7 +27,7 @@ Others have not been verified.
 
 ### [Cocoapods](https://cocoapods.org/)
 
-- insert `pod 'Huruhuru'` to your Podfile.
+- insert `pod 'Huruhuru', :configurations => ['YOUR_DEBUG_SCHEME']` to your Podfile.
 - run `pod install`
 
 ## Usage
