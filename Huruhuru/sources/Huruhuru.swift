@@ -6,9 +6,9 @@ public class Huruhuru {
     static let imageUploadBranchName = "huruhuru-auto-created-branch-for-upload-image"
     
     private init() {}
-    private var repositoryInfo: RepositoryInfo!
-    private var token: GithubToken!
-    private var supportDetectGesture: SupportDetectGesture!
+    private var repositoryInfo = RepositoryInfo(ownerName: "", repositoryName: "")
+    private var token = GithubToken(token: nil)
+    private var supportDetectGesture = SupportDetectGesture(types: [])
     private let githubClient = GithubClient()
     
     public func start(sendTo: RepositoryInfo, token: GithubToken, supportDetectGesture: SupportDetectGesture) {
