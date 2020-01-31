@@ -57,7 +57,7 @@ class HuruhuruReportViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                let issueDescription = self.generateIssueDescription(inputDescription: issueDescription, uploadedScreenImagePath: response.content.downloadURL)
+                let issueDescription = self.generateIssueDescription(inputDescription: issueDescription, uploadedScreenImagePath: response.content.htmlURL)
                 self.githubClient.send(request: CreateIssueRequest(ownerName: self.ownerName, repositoryName: self.repositoryName, title: issueTitle, body: issueDescription, accessToken: self.accessToken)) { [weak self] (result) in
                     DispatchQueue.main.async {
                         self?.loadingView.isHidden = true
@@ -93,7 +93,7 @@ class HuruhuruReportViewController: UIViewController {
         \(fetchDeviceInfo())
         
         ## ScreenShot
-        <image src="\(uploadedScreenImagePath)" width=50% >
+        \(uploadedScreenImagePath)
         """
     }
     

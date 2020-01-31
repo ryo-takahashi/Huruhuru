@@ -11,10 +11,10 @@ struct GithubIssue: Codable {
 // https://developer.github.com/v3/repos/contents/#response-1
 struct GithubCreateFileResponse: Codable {
     struct Content: Codable {
-        let downloadURL: String
+        let htmlURL: String
         
         enum CodingKeys: String, CodingKey {
-            case downloadURL = "download_url"
+            case htmlURL = "html_url"
         }
     }
     let content: Content
