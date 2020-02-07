@@ -13,6 +13,7 @@
 		5A0394B32289F278005CB97F /* HuruhuruReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0394B22289F278005CB97F /* HuruhuruReportViewController.xib */; };
 		5A0C6A06228B2096006B6DAD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C6A05228B2096006B6DAD /* Secret.swift */; };
 		5A0C6A08228B2A77006B6DAD /* Encodable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C6A07228B2A77006B6DAD /* Encodable+JSON.swift */; };
+		5A13EADF23ED2359000832FD /* UIImage+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13EADE23ED2359000832FD /* UIImage+Common.swift */; };
 		5A752FB12289AC4D00818B93 /* Huruhuru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; };
 		5A752FB62289AC4D00818B93 /* HuruhuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FB52289AC4D00818B93 /* HuruhuruTests.swift */; };
 		5A752FB82289AC4D00818B93 /* Huruhuru.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A752FAA2289AC4D00818B93 /* Huruhuru.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,6 +72,7 @@
 		5A0394B22289F278005CB97F /* HuruhuruReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuruhuruReportViewController.xib; sourceTree = "<group>"; };
 		5A0C6A05228B2096006B6DAD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		5A0C6A07228B2A77006B6DAD /* Encodable+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+JSON.swift"; sourceTree = "<group>"; };
+		5A13EADE23ED2359000832FD /* UIImage+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Common.swift"; sourceTree = "<group>"; };
 		5A752FA72289AC4D00818B93 /* Huruhuru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Huruhuru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A752FAA2289AC4D00818B93 /* Huruhuru.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Huruhuru.h; sourceTree = "<group>"; };
 		5A752FAB2289AC4D00818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				5A0C6A07228B2A77006B6DAD /* Encodable+JSON.swift */,
 				5AFAA4E423B32B8C0010912E /* UIView+Common.swift */,
 				5AFAA4E623B339870010912E /* String+Common.swift */,
+				5A13EADE23ED2359000832FD /* UIImage+Common.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AFAA4E123B2FCFF0010912E /* UploadFileRequest.swift in Sources */,
+				5A13EADF23ED2359000832FD /* UIImage+Common.swift in Sources */,
 				5A752FE52289CC1500818B93 /* CreateIssueRequest.swift in Sources */,
 				5A0394AB2289D995005CB97F /* Request.swift in Sources */,
 				5A0C6A08228B2A77006B6DAD /* Encodable+JSON.swift in Sources */,
