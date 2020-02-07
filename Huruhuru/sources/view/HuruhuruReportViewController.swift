@@ -45,7 +45,7 @@ class HuruhuruReportViewController: UIViewController {
     }
 
     @IBAction func didTapSendButton(_ sender: UIButton) {
-        guard let issueTitle = issueTitleField.text, let uploadScreenImageData = uploadScreenImage.pngData() else { return }
+        guard let issueTitle = issueTitleField.text, let uploadScreenImageData = uploadScreenImage.resize(width: 400)?.pngData() else { return }
         let issueDescription = issueDescriptionField.text ?? ""
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
