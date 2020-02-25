@@ -55,3 +55,5 @@ note: By using [cocoapods-keys](https://github.com/orta/cocoapods-keys), you do 
 3. Take a shake gesture or take a screenshot to open the report view
 
 <img src="./assets/example-report-view.png" width=50%>
+
+👋
