@@ -56,5 +56,4 @@ note: By using [cocoapods-keys](https://github.com/orta/cocoapods-keys), you do 
 
 <img src="./assets/example-report-view.png" width=50%>
 
-x
-
+xx
