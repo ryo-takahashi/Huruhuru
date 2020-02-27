@@ -24,6 +24,7 @@
 		5A752FDA2289AECF00818B93 /* Huruhuru.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A752FA72289AC4D00818B93 /* Huruhuru.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A752FE32289C77100818B93 /* HuruhuruReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */; };
 		5A752FE52289CC1500818B93 /* CreateIssueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */; };
+		5AA01702240805AD0054A6E3 /* IssueTitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA01701240805AD0054A6E3 /* IssueTitleTextField.swift */; };
 		5AFAA4E123B2FCFF0010912E /* UploadFileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA4E023B2FCFF0010912E /* UploadFileRequest.swift */; };
 		5AFAA4E523B32B8C0010912E /* UIView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA4E423B32B8C0010912E /* UIView+Common.swift */; };
 		5AFAA4E723B339870010912E /* String+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA4E623B339870010912E /* String+Common.swift */; };
@@ -88,6 +89,7 @@
 		5A752FD52289AE9900818B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuruhuruReportViewController.swift; sourceTree = "<group>"; };
 		5A752FE42289CC1500818B93 /* CreateIssueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueRequest.swift; sourceTree = "<group>"; };
+		5AA01701240805AD0054A6E3 /* IssueTitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTitleTextField.swift; sourceTree = "<group>"; };
 		5AFAA4E023B2FCFF0010912E /* UploadFileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileRequest.swift; sourceTree = "<group>"; };
 		5AFAA4E423B32B8C0010912E /* UIView+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Common.swift"; sourceTree = "<group>"; };
 		5AFAA4E623B339870010912E /* String+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Common.swift"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5A752FE22289C77100818B93 /* HuruhuruReportViewController.swift */,
+				5AA01701240805AD0054A6E3 /* IssueTitleTextField.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				5A13EADF23ED2359000832FD /* UIImage+Common.swift in Sources */,
 				5A752FE52289CC1500818B93 /* CreateIssueRequest.swift in Sources */,
 				5A0394AB2289D995005CB97F /* Request.swift in Sources */,
+				5AA01702240805AD0054A6E3 /* IssueTitleTextField.swift in Sources */,
 				5A0C6A08228B2A77006B6DAD /* Encodable+JSON.swift in Sources */,
 				5A0394AD2289DA10005CB97F /* GithubClient.swift in Sources */,
 				5AFAA4E723B339870010912E /* String+Common.swift in Sources */,

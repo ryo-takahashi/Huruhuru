@@ -1,7 +1,7 @@
 import UIKit
 
 class HuruhuruReportViewController: UIViewController {
-    @IBOutlet private weak var issueTitleField: UITextField!
+    @IBOutlet private weak var issueTitleField: IssueTitleTextField!
     @IBOutlet private weak var issueDescriptionTextView: UITextView!
     @IBOutlet private weak var sendButton: UIButton!
     @IBOutlet private weak var screenImageView: UIImageView!
@@ -34,7 +34,7 @@ class HuruhuruReportViewController: UIViewController {
         sendButton.isEnabled = false
         screenImageView.image = uploadScreenImage
         issueTitleField.delegate = self
-        issueDescriptionTextView.delegate = self
+        issueDescriptionTextView.contentInset = .init(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0)
     }
     
     override func viewDidLayoutSubviews() {
@@ -148,8 +148,4 @@ extension HuruhuruReportViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-}
-
-extension HuruhuruReportViewController: UITextViewDelegate {
-    
 }
