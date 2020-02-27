@@ -14,7 +14,6 @@
                 <outlet property="issueTitleField" destination="esI-lC-Vur" id="HNr-ck-gnA"/>
                 <outlet property="loadingView" destination="i7g-hx-zn3" id="y6A-eS-0SJ"/>
                 <outlet property="screenImageView" destination="1Mx-iK-1Aa" id="Cgm-Eb-KXS"/>
-                <outlet property="sendButton" destination="mUd-3p-y3w" id="kQ2-5w-Mcd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q1J-Am-86w"/>
             </connections>
         </placeholder>
@@ -27,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="858"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-DV-xhq">
-                            <rect key="frame" x="16" y="32" width="288" height="561"/>
+                            <rect key="frame" x="16" y="32" width="288" height="505"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="grb-3l-HXc">
                                     <rect key="frame" x="0.0" y="0.0" width="288" height="57"/>
@@ -80,23 +79,6 @@
                                         <constraint firstAttribute="width" secondItem="1Mx-iK-1Aa" secondAttribute="height" multiplier="1:1" id="oNd-rZ-ujl"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUd-3p-y3w">
-                                    <rect key="frame" x="0.0" y="521" width="288" height="40"/>
-                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="6Bg-wK-n71"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <state key="normal" title="Create Issue 🚀">
-                                        <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <state key="disabled">
-                                        <color key="titleColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="didTapSendButton:" destination="-1" eventType="touchUpInside" id="yjV-5q-4Id"/>
-                                    </connections>
-                                </button>
                             </subviews>
                         </stackView>
                     </subviews>
