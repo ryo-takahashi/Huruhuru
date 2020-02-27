@@ -2,7 +2,7 @@ import UIKit
 
 class HuruhuruReportViewController: UIViewController {
     @IBOutlet private weak var issueTitleField: UITextField!
-    @IBOutlet private weak var issueDescriptionField: UITextField!
+    @IBOutlet private weak var issueDescriptionTextView: UITextView!
     @IBOutlet private weak var sendButton: UIButton!
     @IBOutlet private weak var screenImageView: UIImageView!
     @IBOutlet private weak var loadingView: UIView!
@@ -34,7 +34,13 @@ class HuruhuruReportViewController: UIViewController {
         sendButton.isEnabled = false
         screenImageView.image = uploadScreenImage
         issueTitleField.delegate = self
-        issueDescriptionField.delegate = self
+        issueDescriptionTextView.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        issueTitleField.setRoundedBorder(color: .lightGray, cornerRadius: issueTitleField.bounds.height * 0.5)
+        issueDescriptionTextView.setRoundedBorder(color: .lightGray, cornerRadius: 16.0)
     }
     
     func inject(ownerName: String, repositoryName: String, accessToken: String, uploadScreenImage: UIImage) {
@@ -46,7 +52,7 @@ class HuruhuruReportViewController: UIViewController {
 
     @IBAction func didTapSendButton(_ sender: UIButton) {
         guard let issueTitle = issueTitleField.text, let uploadScreenImageData = uploadScreenImage.resize(width: 400)?.pngData() else { return }
-        let issueDescription = issueDescriptionField.text ?? ""
+        let issueDescription = issueDescriptionTextView.text ?? ""
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
         let currentDateString = formatter.string(from: Date())
@@ -133,7 +139,7 @@ class HuruhuruReportViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         issueTitleField.resignFirstResponder()
-        issueDescriptionField.resignFirstResponder()
+        issueDescriptionTextView.resignFirstResponder()
     }
 }
 
@@ -142,4 +148,8 @@ extension HuruhuruReportViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+extension HuruhuruReportViewController: UITextViewDelegate {
+    
 }
