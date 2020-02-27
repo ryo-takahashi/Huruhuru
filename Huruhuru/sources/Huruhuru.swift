@@ -48,14 +48,19 @@ public class Huruhuru {
             assertionFailure("need set github token")
             return
         }
-        guard let screenImage = UIApplication.shared.keyWindow?.rootViewController?.view.asImage()else {
+        guard let currentPresentedViewController = fetchCurrentPresentedViewController() else {
             return
+        }
+        if let navigationController = currentPresentedViewController as? UINavigationController {
+            if navigationController.topViewController is HuruhuruReportViewController {
+                return
+            }
         }
         let viewController = HuruhuruReportViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
-        
+        let screenImage = currentPresentedViewController.view.asImage()
         viewController.inject(ownerName: repositoryInfo.ownerName, repositoryName: repositoryInfo.repositoryName, accessToken: token, uploadScreenImage: screenImage)
-        UIApplication.shared.delegate?.window??.rootViewController?.present(navigationController, animated: true, completion: nil)
+        currentPresentedViewController.present(navigationController, animated: true, completion: nil)
     }
     
     private func createBranchForImageUploadIfNeeded(ownerName: String, repositoryName: String, accessToken: String) {
@@ -73,6 +78,14 @@ public class Huruhuru {
                 })
             }
         })
+    }
+    
+    private func fetchCurrentPresentedViewController() -> UIViewController? {
+        var viewController = UIApplication.shared.keyWindow?.rootViewController
+        while viewController?.presentedViewController != nil {
+            viewController = viewController?.presentedViewController
+        }
+        return viewController
     }
 }
 
