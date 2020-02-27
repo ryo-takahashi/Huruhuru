@@ -10,8 +10,5 @@ class IssueTitleTextField: UITextField {
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds.insetBy(dx: Self.insetHorizontal, dy: 0.0))
     }
-    
-    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        super.placeholderRect(forBounds: bounds.insetBy(dx: Self.insetHorizontal, dy: 0.0))
-    }
+
 }

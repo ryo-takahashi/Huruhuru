@@ -40,8 +40,9 @@ class HuruhuruReportViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        issueTitleField.setRoundedBorder(color: .lightGray, cornerRadius: issueTitleField.bounds.height * 0.5)
-        issueDescriptionTextView.setRoundedBorder(color: .lightGray, cornerRadius: 16.0)
+        issueTitleField.setCornerRadius(4.0)
+        issueDescriptionTextView.setCornerRadius(4.0)
+        screenImageView.setCornerRadius(4.0)
     }
     
     func inject(ownerName: String, repositoryName: String, accessToken: String, uploadScreenImage: UIImage) {
