@@ -1,11 +1,11 @@
 import UIKit
 
 class HuruhuruReportViewController: UIViewController {
-    @IBOutlet private weak var issueTitleField: UITextField!
-    @IBOutlet private weak var issueDescriptionField: UITextField!
-    @IBOutlet private weak var sendButton: UIButton!
+    @IBOutlet private weak var issueTitleField: IssueTitleTextField!
+    @IBOutlet private weak var issueDescriptionTextView: UITextView!
     @IBOutlet private weak var screenImageView: UIImageView!
     @IBOutlet private weak var loadingView: UIView!
+    private let sendBarButtonItem = UIBarButtonItem(title: "Send", style: .done, target: self, action: #selector(didTapSendButton(_:)))
     
     private var ownerName: String!
     private var repositoryName: String!
@@ -29,12 +29,20 @@ class HuruhuruReportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let cancelBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancelBarButtonItem(_:)))
-        navigationItem.rightBarButtonItem = cancelBarButtonItem
+        navigationItem.leftBarButtonItem = cancelBarButtonItem
+        navigationItem.rightBarButtonItem = sendBarButtonItem
         navigationItem.title = "Huruhuru Report Issue"
-        sendButton.isEnabled = false
+        sendBarButtonItem.isEnabled = false
         screenImageView.image = uploadScreenImage
         issueTitleField.delegate = self
-        issueDescriptionField.delegate = self
+        issueDescriptionTextView.contentInset = .init(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        issueTitleField.setCornerRadius(4.0)
+        issueDescriptionTextView.setCornerRadius(4.0)
+        screenImageView.setCornerRadius(4.0)
     }
     
     func inject(ownerName: String, repositoryName: String, accessToken: String, uploadScreenImage: UIImage) {
@@ -44,9 +52,9 @@ class HuruhuruReportViewController: UIViewController {
         self.uploadScreenImage = uploadScreenImage
     }
 
-    @IBAction func didTapSendButton(_ sender: UIButton) {
+    @objc func didTapSendButton(_ sender: UIBarButtonItem) {
         guard let issueTitle = issueTitleField.text, let uploadScreenImageData = uploadScreenImage.resize(width: 400)?.pngData() else { return }
-        let issueDescription = issueDescriptionField.text ?? ""
+        let issueDescription = issueDescriptionTextView.text ?? ""
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
         let currentDateString = formatter.string(from: Date())
@@ -76,8 +84,8 @@ class HuruhuruReportViewController: UIViewController {
     }
     
     @IBAction func didChangeIssueTitleTextField(_ sender: UITextField) {
-        let isEnabledSendButton = sender.text != nil
-        sendButton.isEnabled = isEnabledSendButton
+        let isEnabledSendButton = sender.text != nil && (sender.text?.isEmpty == false)
+        sendBarButtonItem.isEnabled = isEnabledSendButton
     }
     
     @objc func didTapCancelBarButtonItem(_ sender: UIBarButtonItem) {
@@ -133,7 +141,7 @@ class HuruhuruReportViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         issueTitleField.resignFirstResponder()
-        issueDescriptionField.resignFirstResponder()
+        issueDescriptionTextView.resignFirstResponder()
     }
 }
 
