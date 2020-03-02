@@ -16,8 +16,7 @@ Others have not been verified.
 
 ## TODO
 - [ ] Add Tests
-- [ ] Support CI.
-- [ ] Support Carthage, Swift Package Manager
+- [ ] Support Carthage
 
 ## ⚠ Warning
 
