@@ -55,5 +55,5 @@ note: By using [cocoapods-keys](https://github.com/orta/cocoapods-keys), you do 
 
 light | dark
 -- | --
-<img src="./assets/example-report-view-light.png" width=50%> | <img src="./assets/example-report-view-dark.png" width=50%>
+<img src="./assets/example-report-view-light.png"> | <img src="./assets/example-report-view-dark.png">
 
