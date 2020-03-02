@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "Huruhuru"
-  spec.version      = "0.6.0"
+  spec.version      = "0.7.0"
   spec.summary      = "support issue reporting development tool"
   spec.homepage     = "https://twitter.com/k0uhashi"
   spec.license         = { :type => 'MIT', :file => 'LICENSE' }
