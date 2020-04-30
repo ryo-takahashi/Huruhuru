@@ -10,7 +10,7 @@ Huruhuru is in-app issue reporting debug tool for team QA. supported github only
 
 ## Requirements
 - Swift 5.0 or later
-- iOS 10.0 or later
+- iOS 11.0 or later
 
 Others have not been verified.
 
